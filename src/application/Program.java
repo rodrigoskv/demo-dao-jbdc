@@ -23,7 +23,17 @@ public class Program {
 		Department department = new Department(2, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
 		for(Seller obj : list) {
-		System.out.println(list);
-	}}
+		System.out.println(obj);
+	}
+		System.out.println();
+		
+		System.out.println("======================== test 3, seller find all ========================");
+		list = sellerDao.findAll();
+		for (Seller obj : list) {
+		System.out.println(obj);
+	}
+	}
+	
+	
 
 }
