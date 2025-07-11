@@ -35,18 +35,24 @@ public class Program {
 	}
 		System.out.println();
 		
-		System.out.println("======================== test 2, seller insert ========================");
+		System.out.println("======================== test 4, seller insert ========================");
 		Seller newSeller = new Seller(null, "Romario", "romario@emailromario.com", new Date(), 4000.00, department);
 		sellerDao.insert(newSeller);
 		System.out.println("inserted! new id =" +newSeller.getId());
 	
 		System.out.println();
 		
-		System.out.println("======================== test 2, seller insert ========================");
+		System.out.println("======================== test 5, seller update ========================");
 		seller = sellerDao.findById(1);
 		seller.setName("Cássio Corinthians");
 		sellerDao.update(seller);
 		System.out.println("Update completed");
+		
+		System.out.println();
+		
+		System.out.println("======================== test 6, seller delete ========================");
+		sellerDao.deleteByID(11);		
+		System.out.println("Delete completed");
 	
 	}
 		
